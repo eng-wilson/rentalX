@@ -1,0 +1,17 @@
+import { v4 as uuidv4 } from 'uuid';
+
+class Category {
+  id?: string;
+  name: string;
+  description: string;
+  created_at?: Date;
+
+  constructor({ name, id, description }: Category) {
+    this.id = id ?? uuidv4();
+    this.name = name;
+    this.description = description;
+    this.created_at = new Date();
+  }
+}
+
+export { Category };
